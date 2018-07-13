@@ -1,0 +1,47 @@
+
+html {
+
+}
+
+body {
+  font-family: $sans-serif;
+  color: #3d3d3d;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $serif;
+  font-weight: 400;
+}
+
+h2 {
+  &.header__upper {
+    @include header_centered;
+  }
+}
+
+h2,
+h3 {
+  font-size: 1.44444rem;
+  line-height: 1.875rem;
+}
+
+h3 {
+  article & {
+    text-decoration: underline;
+    font-weight: 700;
+  }
+}
+
+// ====== Block Quote =======
+blockquote {
+  @extend %box-layers-x;
+  background-color: $blue-lightest;
+  border-radius: 20px 0;
+  font-weight: bold;
+  text-align: center;
+}

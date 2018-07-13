@@ -1,0 +1,89 @@
+//
+// Milligram v1.2.0
+// http://milligram.github.io
+//
+// Copyright (c) 2016 CJ Patoilo
+// Licensed under the MIT license
+//
+
+
+// Button
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.button,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	background-color: $color-primary;
+	border: .1rem solid $color-primary;
+	border-radius: 10px;
+	color: $white;
+	cursor: pointer;
+	display: inline-block;
+	height: auto;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+
+	&:focus,
+	&:hover {
+		background-color: $color-secondary;
+		border-color: $color-secondary;
+		color: $white;
+		outline: 0;
+	}
+
+	&[disabled] {
+		cursor: default;
+		opacity: .5;
+
+		&:focus,
+		&:hover {
+			background-color: $color-primary;
+			border-color: $color-primary;
+		}
+	}
+
+	&.button-outline {
+		background-color: transparent;
+		color: $color-primary;
+
+		&:focus,
+		&:hover {
+			background-color: transparent;
+			border-color: $color-secondary;
+			color: $color-secondary;
+		}
+
+		&[disabled] {
+
+			&:focus,
+			&:hover {
+				border-color: inherit;
+				color: $color-primary;
+			}
+		}
+	}
+
+	&.button-clear {
+		background-color: transparent;
+		border-color: transparent;
+		color: $color-primary;
+
+		&:focus,
+		&:hover {
+			background-color: transparent;
+			border-color: transparent;
+			color: $color-secondary;
+		}
+
+		&[disabled] {
+
+			&:focus,
+			&:hover {
+				color: $color-primary;
+			}
+		}
+	}
+}

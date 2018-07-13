@@ -1,0 +1,22 @@
+$off-white: #ececec;
+
+.header {
+  border-bottom: 1px solid $off-white;
+
+  &__inner {
+    align-items: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: ". . logo menu menu";
+    grid-template-columns: repeat(5, 1fr);
+    height: 65px;
+  }
+
+  &__logo {
+    grid-area: logo;
+    justify-self: center;
+    width: 120px;
+    z-index: 100;
+    margin: 0;
+  }
+}

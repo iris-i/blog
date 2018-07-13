@@ -1,0 +1,103 @@
+// ============ Mixins =================
+// TABLE OF CONTENTS
+// 1. Visually Hidden element
+
+// 1. Visually Hidden Element --------------
+// Uses @extend to reduce bloat since output remains the same
+%visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+// Box shadow
+@mixin box-shadow (
+  $offset-x:1px,
+  $offset-y:0,
+  $blur-radius:2px,
+  $spread-radius:5px,
+  $color:$silver) {
+  box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color;
+}
+
+%box-shadow-wide {
+  @include box-shadow(1px, 1px, 3px, 10px, $silver );
+}
+
+// Layered box-shadow
+@mixin box-shadow-layers-x($inner-color:$color-primary, $outer-color:lighten($yellow, 15%)) {
+  box-shadow:
+          -8px 0 0 rgba(255,255,255,0.3),
+          -8px 0 0 $inner-color,
+          -15px 0 0 $outer-color;
+}
+
+%box-layers-x {
+  @include box-shadow-layers-x;
+}
+
+@mixin box-shadow-layers-y($inner-color:$color-initial, $outer-color:$aqua) {
+  box-shadow:
+          0 -4px 0 0 rgba(255,255,255,0.3),
+          0 -4px 0 0 $inner-color,
+          0 -8px 0 0 $outer-color;
+}
+
+%box-layers-y {
+  @include box-shadow-layers-y;
+}
+
+//======================= Flex Container==================
+@mixin flex-container(
+  $justify-content: flex-start,
+  $align-content: space-between,
+  $flex-wrap: wrap ) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: $flex-wrap;
+  justify-content: $justify-content;
+  align-content: $align-content;
+  align-items: flex-start;
+}
+
+//  Flex item
+@mixin flex-item($flex: 0 1 auto) {
+  // Define this value by default to avoid IE10 bug
+  flex: $flex;
+  align-self: auto;
+}
+
+// Pseudo-bottom border
+@mixin psuedo-bottom-border {
+  &:after {
+    margin-top: .25%;
+    display: block;
+    height: 3px;
+    background-color: $yellow;
+    width: 3rem;
+    content: "";
+  }
+}
+
+%psuedo-bottom-border {
+  @include psuedo-bottom-border;
+}
+
+//========= Typography Mixins =========
+@mixin intro-text {
+  line-height: 1.65rem;
+  font-weight: 300;
+  font-size: 1.22222rem;
+}
+
+@mixin header_centered {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $sans-serif;
+  text-decoration: underline;
+}

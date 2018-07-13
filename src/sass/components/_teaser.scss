@@ -1,0 +1,9 @@
+.teaser {
+  &__text {
+    @include intro-text;
+  }
+
+  &--home {
+    font-size: 1.1rem;
+  }
+}

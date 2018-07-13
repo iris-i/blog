@@ -1,0 +1,15 @@
+// Importing the milligram library.
+// @todo Add more variables to the library, compile a variables partial and
+// @todo import the library through npm. Keep only a copy of the milligram variables in the theme directory.
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+// Import Base partials
+@import 'colors';
+@import 'variables';
+@import 'milligram/milligram';
+@import 'mixins';
+@import 'typography';
