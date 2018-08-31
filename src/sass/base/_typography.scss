@@ -1,10 +1,18 @@
+$base-font-size: 1.125em;
+$h1: 2.074rem;
+$h2: 1.728rem;
+$h3: 1.44rem;
+$h4: 1.12rem;
+$small-font: 0.833rem;
+
 
 html {
-
+  font-size: $base-font-size;
 }
 
 body {
   font-family: $sans-serif;
+  line-height: 1.45;
   color: #3d3d3d;
 }
 
@@ -16,6 +24,13 @@ h4,
 h5 {
   font-family: $serif;
   font-weight: 400;
+  margin: 1.414rem 0 0.5rem;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: $h1;
 }
 
 h2 {
@@ -24,10 +39,15 @@ h2 {
   }
 }
 
-h2,
-h3 {
-  font-size: 1.44444rem;
-  line-height: 1.875rem;
+h2 {font-size: $h2;}
+
+h3 {font-size: $h3; }
+
+h4 {font-size: $h4; }
+
+small,
+.font_small {
+  font-size: $small-font;
 }
 
 h3 {
@@ -37,6 +57,8 @@ h3 {
   }
 }
 
+
+
 // ====== Block Quote =======
 blockquote {
   @extend %box-layers-x;
@@ -44,4 +66,10 @@ blockquote {
   border-radius: 20px 0;
   font-weight: bold;
   text-align: center;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-size: $base-font-size;
 }
