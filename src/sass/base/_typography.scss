@@ -37,6 +37,10 @@ h2 {
   &.header__upper {
     @include header_centered;
   }
+
+  > a {
+    color: $dusty-purple;
+  }
 }
 
 h2 {font-size: $h2;}

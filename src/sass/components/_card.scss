@@ -1,0 +1,50 @@
+.card {
+  width: 100%;
+  border: 1px solid $off-white;
+
+  &--wrapper {
+    display: block;
+
+    @include breakpoint($m-and-up) {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+
+      nav.pager {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    }
+
+    @include breakpoint($l-and-up){
+      grid-gap: 15px;
+      grid-template-columns: repeat(3, 1fr);
+
+      nav.pager {
+        grid-column-start: 1;
+        grid-column-end: 4;
+      }
+    }
+  }
+
+  &__content {
+    padding: .5em;
+  }
+
+  &__title {
+    font-size: $h3;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  // Atom Overrides
+  .banner__text {
+
+  }
+
+  .banner__date {
+
+  }
+}

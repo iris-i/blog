@@ -4,6 +4,8 @@
 $aqua: #23b9cb;
 $aqua-crisp: #1cd8ed;
 $blue-lightest: #e7edf4;
+$dark-aqua: darken(#009A9F, 5%);
+$dusty-purple: #A9B3CE;
 
 // Warm
 $yellow: #f2bb05;
@@ -23,3 +25,7 @@ $color-secondary: $gunpowder; // 606c76 !default;
 $color-tertiary: $off-white !default;
 $color-quaternary: #d3d4d5 !default;
 $color-quinary: #e1dedd !default;
+
+// Experimental:
+
+$salmon: #F4989C;

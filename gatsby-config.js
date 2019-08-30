@@ -12,6 +12,14 @@ module.exports = {
         name: 'article',
       }
     },
+    {
+      resolve: `gatsby-remark-prismjs`,
+      options: {
+        classPrefix: "language-",
+        inlineCodeMarker: null,
+        aliases: {}
+      }
+    },
     `gatsby-transformer-remark`,
   ],
 }

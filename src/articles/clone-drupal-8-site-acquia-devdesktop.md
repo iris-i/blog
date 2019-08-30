@@ -2,6 +2,8 @@
 path: '/articles/clone-drupal-8-site-acquia-devdesktop'
 title: 'Clone a Drupal 8 Site into Acquia DevDesktop'
 date: '2017-11-12'
+tags: ["Drupal", "Acquia DevDesktop"]
+background: 'bg/autumn.svg'
 intro: Here's an easy method to clone an existing Drupal 8 site into your local environment using Acquia Dev Desktop. All you need is the site codebase and a database dump.
 ----
 

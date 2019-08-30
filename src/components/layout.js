@@ -8,7 +8,7 @@ import Footer from './footer/Footer'
 
 import '../sass/styles.scss';
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children, data, page_title, page_description, page_keywords }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -22,13 +22,13 @@ const Layout = ({ children, data }) => (
     render={data => (
       <>
         <Helmet
-          title={data.site.siteMetadata.title}
+          title={`${data.site.siteMetadata.title} | ${ page_title }`}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: page_title, content: page_description },
+            { name: page_keywords, content: page_description },
           ]}
         />
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={`${data.site.siteMetadata.title} | ${ page_title }`} />
         <div>
           {children}
         </div>
