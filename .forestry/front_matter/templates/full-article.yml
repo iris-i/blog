@@ -19,4 +19,5 @@ fields:
   default: []
   label: Tags
 pages:
+- src/articles/this-is-a-test-title.md
 - src/articles/twig-do-something-delimiter.md
