@@ -1,4 +1,37 @@
 ---
 label: Articles template
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+- name: intro
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Intro
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: path
+  type: text
+  config:
+    required: false
+  label: Path
+  description: URL for the article to display in
