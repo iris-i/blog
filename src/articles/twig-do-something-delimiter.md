@@ -1,11 +1,14 @@
 ---
-path: '/articles/twig-do-something-delimiter'
-title: 'The Twig "Do Something" Delimiter'
-date: '2018-01-26'
-intro: The Twig "Do-Something" Delimiter is used to perform various actions. In Drupal you use this delimiter to perform tasks like conditionally displaying page regions if they are not empty.
----
+path: "/articles/twig-do-something-delimiter"
+title: The Twig "Do Something" Delimiter
+date: 2018-01-26
+intro: The Twig "Do-Something" Delimiter is used to perform various actions. In Drupal
+  you use this delimiter to perform tasks like conditionally displaying page regions
+  if they are not empty.
+tags: []
 
- In Drupal you use this delimiter to perform actions like adding classes to a template depending on a template variable, applying conditional rules for rendering items (like if-else blocks), displaying page regions if they are not empty, etc.
+---
+In Drupal you use this delimiter to perform actions like adding classes to a template depending on a template variable, applying conditional rules for rendering items (like if-else blocks), displaying page regions if they are not empty, etc.
  
  Example:
  Check if a theme region exists before displaying it.
