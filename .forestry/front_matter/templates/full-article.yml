@@ -14,3 +14,7 @@ fields:
 - type: textarea
   name: intro
   label: intro
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
