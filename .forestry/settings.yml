@@ -19,7 +19,7 @@ build:
   preview_env:
   - PATH_PREFIX=/
   - GATSBY_WEBPACK_PUBLIC_PATH=/
-  preview_output_directory: public
+  preview_output_directory: "/public"
   install_dependencies_command: npm install
   preview_docker_image: node:10
   mount_path: "/srv"
